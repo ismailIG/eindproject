@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
 
-@Controller
-public class indexController {
+    @Controller
+    public class IndexController {
     @Autowired
     ProductRepository repo;
     @ModelAttribute("all")
@@ -24,19 +24,6 @@ public class indexController {
     }
     @RequestMapping(value ={"/","/index"},method = RequestMethod.GET)
     public String showIndex(ModelMap map){return "index" ;}
-
-
-    @RequestMapping(value ={"/","/index"},method = RequestMethod.POST)
-    //@ModelAttribute("nSnack")  om leeg te maken
-    public String savSnack(@ModelAttribute("nSnack")   @Valid Product nSnack, BindingResult bindingResult){
-        //repo.save(nSnack);
-        if(bindingResult.hasErrors()){
-            return  "index";
-        }
-        repo.save(nSnack);
-        // redirect:index" om showIndex(ModelMap map laten uitvoeren en de gegevens van database te loaden
-        return  "redirect:index";
-    }
 
 
 }

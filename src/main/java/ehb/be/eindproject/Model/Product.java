@@ -16,7 +16,7 @@ public class Product {
     private String dier;
     private  String beschrijving;
 
-    // hier komt een constrctur
+    // hier komt een constructeur
 
     public Product() {
     }
@@ -30,8 +30,6 @@ public class Product {
     public void setBeschrijving(String beschrijving) {
         this.beschrijving = beschrijving;
     }
-
-
 
     public int getId() {
         return id;
