@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet"
@@ -63,7 +63,6 @@
             <td><a th:href="@{/details/{id}(id=${product.id})}">details</a></td>
         </tr>
         </tbody>
-
 </table>
 
     <div>
@@ -71,9 +70,87 @@
     </div>
 </div>
 
+<!-- kolommen dieren -->
+<div class="row">
+    <div class="col-sm-4">
+        <div class="thumbnail">
+            <a href="/static/images/hond.jpg">
+                <img th:src="@{~/images/hond.jpg}" alt="Hond" style="width:80%">
+                <div class="dierenfoto">
+                    <p>Lorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsumLorem ipsum Lorem ipsumLorem
+                        ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="thumbnail">
+            <a href="/static/images/kat.jpg">
+                <img th:src="@{~/images/kat.jpg}" alt="Kat" style="width:80%">
+                <div class="dierenfoto">
+                    <p>Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum Lorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsumLorem ipsum</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="thumbnail">
+            <a href="/static/images/reptielen.jpg">
+                <img th:src="@{~/images/reptielen.jpg}" alt="Reptielen" style="width: 80%;">
+                <div class="dierenfoto">
+                    <p>Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum Lorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsumLorem ipsum</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+<div class="col-sm-4">
+    <div class="thumbnail">
+        <a href="/static/images/vogel.jpg">
+            <img th:src="@{~/images/vogel.jpg}" alt="Vogel" style="width: 80%;">
+            <div class="dierenfoto">
+                <p>Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="col-sm-4">
+    <div class="thumbnail">
+        <a href="/static/images/paard.jpg">
+            <img th:src="@{~/images/paard.jpg}" alt="Paard" style="width: 80%;">
+            <div class="dierenfoto">
+                <p>Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="col-sm-4">
+    <div class="thumbnail">
+        <a href="/static/images/konijn.jpg">
+            <img th:src="@{~/images/konijn.jpg}" alt="Konijn" style="width: 80%;">
+            <div class="dierenfoto">
+                <p>Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+
 
 </body>
 <footer>
-    &copy;copyright 2018
+
+    &copy; Petshop 2018
+
 </footer>
 </html>
