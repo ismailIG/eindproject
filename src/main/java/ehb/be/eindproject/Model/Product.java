@@ -12,9 +12,8 @@ public class Product {
     private  int id;
     private  String naam;
     private  float prijs;
-    private  String voedsel;
-    private  String speelgoed;
-    private  String habitat;
+    private String categorie;
+    private String dier;
     private  String beschrijving;
 
     // hier komt een constrctur
@@ -58,27 +57,19 @@ public class Product {
         this.prijs = prijs;
     }
 
-    public String getVoedsel() {
-        return voedsel;
+    public String getCategorie() {
+        return categorie;
     }
 
-    public void setVoedsel(String voedsel) {
-        this.voedsel = voedsel;
+    public void setCategorie(String categorie) {
+        this.categorie = categorie;
     }
 
-    public String getSpeelgoed() {
-        return speelgoed;
+    public String getDier() {
+        return dier;
     }
 
-    public void setSpeelgoed(String speelgoed) {
-        this.speelgoed = speelgoed;
-    }
-
-    public String getHabitat() {
-        return habitat;
-    }
-
-    public void setHabitat(String habitat) {
-        this.habitat = habitat;
+    public void setDier(String dier) {
+        this.dier = dier;
     }
 }

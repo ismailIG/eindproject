@@ -43,10 +43,9 @@
         <thead>
         <tr>
             <th>Naam</th>
-            <th>Speelgoed</th>
-            <th>Voedsel</th>
-            <th>Speelgoed</th>
-            <th>Habitat</th>
+            <th>Beschrijving</th>
+            <th>Dier</th>
+            <th>Categorie</th>
             <th>Prijs</th>
         </tr>
         </thead>
@@ -56,9 +55,9 @@
 
         <tr th:each="product:${all}" th:class="(${productStat.odd})?'odd':'even'">
             <td th:text="${product.naam}"></td>
-            <td th:text="${product.voedsel}"></td>
-            <td th:text="${product.speelgoed}"></td>
-            <td th:text="${product.habitat}"></td>
+            <td th:text="${product.beschrijving}"></td>
+            <td th:text="${product.dier}"></td>
+            <td th:text="${product.categorie}"></td>
             <td th:text="${product.prijs}"></td>
 
             <td><a th:href="@{/details/{id}(id=${product.id})}">details</a></td>
