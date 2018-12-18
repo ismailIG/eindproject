@@ -17,6 +17,13 @@ public class Product {
     private  String   habitat;
     private  String beschrijving;
 
+    // hier komt een constrctur
+
+    public Product() {
+    }
+
+    // getters en setters
+
     public String getBeschrijving() {
         return beschrijving;
     }
@@ -25,8 +32,7 @@ public class Product {
         this.beschrijving = beschrijving;
     }
 
-    public Product() {
-    }
+
 
     public int getId() {
         return id;
