@@ -12,9 +12,9 @@ public class Product {
     private  int id;
     private  String naam;
     private  float prijs;
-    private  String  voedsel;
-    private  String  speelGoed;
-    private  String   habitat;
+    private  String voedsel;
+    private  String speelgoed;
+    private  String habitat;
     private  String beschrijving;
 
     public String getBeschrijving() {
@@ -60,12 +60,12 @@ public class Product {
         this.voedsel = voedsel;
     }
 
-    public String getSpeelGoed() {
-        return speelGoed;
+    public String getSpeelgoed() {
+        return speelgoed;
     }
 
-    public void setSpeelGoed(String speelGoed) {
-        this.speelGoed = speelGoed;
+    public void setSpeelgoed(String speelgoed) {
+        this.speelgoed = speelgoed;
     }
 
     public String getHabitat() {
