@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.validation.Valid;
 
 @Controller
-public class indexController {
+public class IndexController {
     @Autowired
     ProductRepository repo;
     @ModelAttribute("all")
