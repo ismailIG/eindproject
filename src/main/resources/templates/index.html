@@ -27,10 +27,13 @@
 </head>
 <body>
 <nav th:fragment="navigation">
-    <h1><a th:href="@{~/index}">Derdehands</a></h1>
+    <h1><a th:href="@{~/index}">Petshop</a></h1>
     <ul>
-        <li><a th:href="@{~/new}">New</a></li>
-        <li><a th:href="@{~/about}">About</a></li>
+        <li><a th:href="@{~/home}">Home</a></li>
+        <li><a th:href="@{~/producten}">Producten</a></li>
+        <li><a th:href="@{~/about us}">About us</a></li>
+        <li><a th:href="@{~/contact}">Contact</a></li>
+        <li><a th:href="@{~/bestel}">Bestel</a></li>
     </ul>
 
 </nav>
@@ -39,12 +42,12 @@
 
         <thead>
         <tr>
-            <th>Name</th>
-            <th>Prijs</th>
+            <th>Naam</th>
+            <th>Speelgoed</th>
             <th>Voedsel</th>
+            <th>Speelgoed</th>
+            <th>Habitat</th>
             <th>Prijs</th>
-            <th>Prijs</th>
-            <th>Details</th>
         </tr>
         </thead>
 
@@ -53,7 +56,11 @@
 
         <tr th:each="product:${all}" th:class="(${productStat.odd})?'odd':'even'">
             <td th:text="${product.naam}"></td>
+            <td th:text="${product.voedsel}"></td>
+            <td th:text="${product.speelgoed}"></td>
+            <td th:text="${product.habitat}"></td>
             <td th:text="${product.prijs}"></td>
+
             <td><a th:href="@{/details/{id}(id=${product.id})}">details</a></td>
         </tr>
         </tbody>
@@ -61,7 +68,7 @@
 </table>
 
     <div>
-        <a class="btn btn-primary" th:href="@{~/new}">new</a>
+        <a class="btn btn-primary" th:href="@{~/bestel}">bestel</a>
     </div>
 </div>
 
