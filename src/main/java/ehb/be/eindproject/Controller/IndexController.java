@@ -25,7 +25,6 @@ import javax.validation.Valid;
     @RequestMapping(value ={"/","/index"},method = RequestMethod.GET)
     public String showIndex(ModelMap map){return "index" ;}
 
-
 }
 
 

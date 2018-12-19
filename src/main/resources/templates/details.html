@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"
+
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{~/css/main.css}">
+    <!--scripts datatable-->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function (){
+            $('#productstable').DataTable();
+        });
+    </script>
+
+    <title>katten</title>
+</head>
+<body>
+<nav th:fragment="navigation">
+    <h1><a th:href="@{~/index}">Petshop</a></h1>
+    <ul>
+        <li><a th:href="@{~/home}">Home</a></li>
+        <li><a th:href="@{~/producten}">Producten</a></li>
+        <li><a th:href="@{~/about us}">About us</a></li>
+        <li><a th:href="@{~/contact}">Contact</a></li>
+        <li><a th:href="@{~/bestel}">Bestel</a></li>
+    </ul>
+
+</nav>
+
+<table id="producttable">
+
+    <thead>
+    <tr>
+        <th>Categorie</th>
+        <th>beschrijving</th>
+
+
+    </tr>
+    </thead>
+
+    <tbody>
+
+
+    <tr>
+        <td th:text="${product.categorie}"></td>
+        <td th:text="${product.beschrijving}"></td>
+        <td th:text="${product.prijs}"></td>
+
+        <td><a th:href="@{/details/{id}(id=${product.id})}">Winkelwagen</a></td>
+    </tr>
+    </tbody>
+
+</table>
+</body>
+<br>
+<footer>
+    &copy;copyright 2018
+</footer>
+</html>
