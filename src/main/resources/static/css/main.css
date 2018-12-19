@@ -23,6 +23,11 @@ nav ul li a {
 }
 
 
+.smallimg{
+    width: 70px;
+    height: 90px;
+    display: inline;
+}
 
 footer {
     background: black;

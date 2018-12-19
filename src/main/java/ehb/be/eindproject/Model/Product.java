@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.awt.*;
 
 @Entity
 public class Product {
@@ -15,6 +16,15 @@ public class Product {
     private String categorie;
     private String dier;
     private  String beschrijving;
+    private String foto;
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
 
     // hier komt een constructeur
 
