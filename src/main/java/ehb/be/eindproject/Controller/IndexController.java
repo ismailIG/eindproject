@@ -22,7 +22,7 @@ import javax.validation.Valid;
 
         return repo.findAll();
     }
-    @RequestMapping(value ={"/","/index"},method = RequestMethod.GET)
+    @RequestMapping(value ={"/","/index","/home"},method = RequestMethod.GET)
     public String showIndex(ModelMap map){return "index" ;}
 
 }
