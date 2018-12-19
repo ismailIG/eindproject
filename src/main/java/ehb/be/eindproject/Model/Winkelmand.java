@@ -6,27 +6,33 @@ import java.util.HashSet;
 import java.util.List;
 
 public class Winkelmand {
-    List<String> producten;
+    //singleton pattern
+    private static Winkelmand instance = new Winkelmand();
+
+    private Winkelmand() {
+        producten = new ArrayList<Product>();
+    }
+
+    public static Winkelmand getInstance() {
+        return instance;
+    }
+
+    //Own variables/methods
+    ArrayList<Product> producten;
     float total;
 
-    public Winkelmand() {
-        producten = new ArrayList<String>();
+    public void addProducten(Product p){
+        producten.add(p);
     }
-    public void addProducten(String producten){
-        producten.addProducten();
-    }
-    public void removeProducten(String producten){
-        producten.removeProducten();
+    public void removeProducten(Product p){
+        producten.remove(p);
     }
 
-    public void getNumberOfProducten(){
-        System.out.println(producten.size());
+    public ArrayList<Product> getProducten() {
+        return producten;
     }
 
-    public String getItemName(int index){
-        return producten.get(bestel);
-    }
-
+    /*
     public void getTotalOfWinkelmand(){
         total = 0;
         for(String x: producten){
@@ -41,7 +47,7 @@ public class Winkelmand {
         System.out.println(total);
     }
 
-
+*/
 
 
 
