@@ -41,7 +41,7 @@
         <span th:text="${product.prijs}"></span><br>
 
 
-<form th:action="@{~/details}" method="post">
+<form th:action="@{~/winkelmand}" method="post">
             <input type="hidden" name="id" th:value="${product.id}">
          <label for="amount">Aantal:</label>
          <select name="amount" id="amount">
