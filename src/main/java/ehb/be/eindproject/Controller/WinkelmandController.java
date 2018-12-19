@@ -17,12 +17,17 @@ public class WinkelmandController {
 
         return repo.findAll();
     }
-    @RequestMapping(value ={"/winkelmand"},method = RequestMethod.GET)
+    @RequestMapping(value = {"/winkelmand"},method = RequestMethod.GET)
     public String showIndex(ModelMap map){
-
-       map.addAttribute("producten", Winkelmand.getInstance().getProducten());
+        map.addAttribute("producten", Winkelmand.getInstance().getProducten());
 
         return "winkelmand";}
+
+        @RequestMapping(value = {"/winkelmand"}, method = RequestMethod.POST)
+    public String ToCart(ModelMap map){
+        map.addAttribute("producten",Winkelmand.getInstance().getProducten());
+        return "winkelmand";
+        }
 
 
 }
