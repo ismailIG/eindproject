@@ -17,6 +17,7 @@ public class Product {
     private String dier;
     private  String beschrijving;
     private String foto;
+    private int aantal;
 
     public String getFoto() {
         return foto;
@@ -79,5 +80,9 @@ public class Product {
 
     public void setDier(String dier) {
         this.dier = dier;
+    }
+
+    public int getAantal() {
+        return aantal;
     }
 }

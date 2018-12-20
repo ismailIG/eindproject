@@ -57,6 +57,7 @@
             <th>Dier</th>
             <th>Categorie</th>
             <th>Prijs</th>
+            <th>Aantal</th>
         </tr>
         </thead>
         <tbody>
@@ -66,6 +67,7 @@
             <td th:text="${product.dier}"></td>
             <td th:text="${product.categorie}"></td>
             <td th:text="${product.prijs}"></td>
+            <td th:text="${product.aantal}"></td>
             <td><a  class="btn btn-primary" th:href="@{/details/{id}(id=${product.id})}">details</a></td>
         </tr>
         </tbody>
