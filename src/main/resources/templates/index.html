@@ -8,17 +8,25 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
           crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{~/css/main.css}">
+    <!-- CSS Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <!--css datatable-->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
     <!--scripts-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
     <!--scripts datatable-->
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <script>
-        $(document).ready(function (){
+        $(document).ready(function () {
             $('#productstable').DataTable();
         });
     </script>
@@ -33,13 +41,13 @@
     <ul>
         <li><a th:href="@{~/index}">Home</a></li>
         <li><a th:href="@{~/producten}">Producten</a></li>
-        <li><a th:href="@{~/about us}">About us</a></li>
+        <li><a th:href="@{~/about}">About</a></li>
         <li><a th:href="@{~/contact}">Contact</a></li>
     </ul>
 
 </nav>
 <div id="product" class="container">
-<table id="productstable">
+    <table id="productstable">
 
         <thead>
         <tr>
@@ -50,24 +58,24 @@
             <th>Prijs</th>
         </tr>
         </thead>
-
         <tbody>
-
-
         <tr th:each="product:${all}" th:class="(${productStat.odd})?'odd':'even'">
             <td th:text="${product.naam}"></td>
             <td th:text="${product.beschrijving}"></td>
             <td th:text="${product.dier}"></td>
             <td th:text="${product.categorie}"></td>
             <td th:text="${product.prijs}"></td>
-
-            <td><a th:href="@{/details/{id}(id=${product.id})}">details</a></td>
+            <td><a  class="btn btn-primary" th:href="@{/details/{id}(id=${product.id})}">details</a></td>
         </tr>
         </tbody>
-</table>
+    </table>
+    <!--<a href="#" class="btn btn-primary" role="button">Toon details</a>-->
 </div>
 
-<!-- kolommen dieren -->
+
+
+
+<!-- kolommen dieren
 <div class="row">
     <div class="col-sm-4">
         <div class="thumbnail">
@@ -106,45 +114,47 @@
         </div>
     </div>
 
-<div class="col-sm-4">
-    <div class="thumbnail">
-        <a href="/static/images/vogel.jpg">
-            <img th:src="@{~/images/vogel.jpg}" alt="Vogel" style="width: 80%;">
-            <div class="dierenfoto">
-                <p>Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
-            </div>
-        </a>
+    <div class="col-sm-4">
+        <div class="thumbnail">
+            <a href="/static/images/vogel.jpg">
+                <img th:src="@{~/images/vogel.jpg}" alt="Vogel" style="width: 80%;">
+                <div class="dierenfoto">
+                    <p>Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                        Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+                </div>
+            </a>
+        </div>
     </div>
-</div>
 
-<div class="col-sm-4">
-    <div class="thumbnail">
-        <a href="/static/images/paard.jpg">
-            <img th:src="@{~/images/paard.jpg}" alt="Paard" style="width: 80%;">
-            <div class="dierenfoto">
-                <p>Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
-            </div>
-        </a>
+    <div class="col-sm-4">
+        <div class="thumbnail">
+            <a href="/static/images/paard.jpg">
+                <img th:src="@{~/images/paard.jpg}" alt="Paard" style="width: 80%;">
+                <div class="dierenfoto">
+                    <p>Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                        Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+                </div>
+            </a>
+        </div>
     </div>
-</div>
 
-<div class="col-sm-4">
-    <div class="thumbnail">
-        <a href="/static/images/konijn.jpg">
-            <img th:src="@{~/images/konijn.jpg}" alt="Konijn" style="width: 80%;">
-            <div class="dierenfoto">
-                <p>Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-                    Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
-            </div>
-        </a>
+    <div class="col-sm-4">
+        <div class="thumbnail">
+            <a href="/static/images/konijn.jpg">
+                <img th:src="@{~/images/konijn.jpg}" alt="Konijn" style="width: 80%;">
+                <div class="dierenfoto">
+                    <p>Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                        Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum</p>
+                </div>
+            </a>
+        </div>
     </div>
-</div>
-</div>
+</div> -->
 
 
 </body>
+
+
 <footer>
 
     &copy; Petshop 2018
