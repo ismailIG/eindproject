@@ -11,6 +11,8 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
           crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{~/css/main.css}">
+    <!-- CSS Icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
     <!--CSS Datatable -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
@@ -73,7 +75,7 @@
 <div class="row">
     <div class="col-75">
         <div class="container-winkelmand">
-            <form action="/action_page.php">
+            <form th:action="@{~/bestel}" method="post">
 
                 <div class="row">
                     <div class="col-50">
