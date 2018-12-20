@@ -37,9 +37,6 @@
 </head>
 <body>
 <nav th:replace="~{index::navigation}"></nav>
-
-
-</nav>
 <div id="product" class="container">
     <table id="productstable">
 
@@ -92,12 +89,12 @@
 
                         <div class="row">
                             <div class="col-50">
-                                <label for="state">Gemeente</label>
-                                <input type="text" id="state" name="Anderlecht" placeholder="AN">
+                                <label for="gemeente">Gemeente</label>
+                                <input type="text" id="gemeente" name="gemeente" placeholder="AN">
                             </div>
                             <div class="col-50">
-                                <label for="zip">Postcode</label>
-                                <input type="text" id="zip" name="zip" placeholder="2018">
+                                <label for="postcode">Postcode</label>
+                                <input type="postcode" id="postcode" name="postcode" placeholder="2018">
                             </div>
                         </div>
                     </div>
@@ -139,7 +136,7 @@
     </div>
     <div class="col-25">
         <div class="container-winkelmand">
-            <h4>Winkelmand</h4> <span class="prijs" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+            <h4>Winkelmand</h4> <span class="prijs" style="color:black"></span></h4>
             <p><a href="#">Product </a> <span class="price">0.00</span></p>
             <hr>
             <p>Total <span class="price" style="color:black"><b>0.00</b></span></p>
