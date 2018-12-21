@@ -32,22 +32,18 @@ public class Winkelmand {
         return producten;
     }
 
-    /*
-    public void getTotalOfWinkelmand(){
-        total = 0;
-        for(String x: producten){
-            if (x.equals("A")){
-                total += 0.0;
-            }else if (x.equals("B")){
-                total += 0.0;
-            }else if (x.equals("C")){
-                total += 0.00;
-            }
+
+    public float getTotalOfWinkelmand(){
+       float total = 0;
+
+        for (Product p: producten) {
+            total += p.getPrijs();
         }
-        System.out.println(total);
+
+       return total;
     }
 
-*/
+
 
 
 

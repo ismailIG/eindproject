@@ -14,30 +14,35 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class WinkelmandController {
     @Autowired
     ProductRepository repo;
+
     public Iterable<Product> findAll() {
 
         return repo.findAll();
     }
-    @RequestMapping(value = {"/winkelmand"},method = RequestMethod.GET)
-    public String showIndex(ModelMap map){
+
+    @RequestMapping(value = {"/winkelmand"}, method = RequestMethod.GET)
+    public String showIndex(ModelMap map) {
         map.addAttribute("producten", Winkelmand.getInstance().getProducten());
 
-        return "winkelmand";}
+        return "winkelmand";
+    }
 
-        @RequestMapping(value = {"/winkelmand"}, method = RequestMethod.POST)
-    public String ToCart(ModelMap map, @RequestParam(value = "id") int id){
+    @RequestMapping(value = {"/winkelmand"}, method = RequestMethod.POST)
+    public String ToCart(ModelMap map, @RequestParam(value = "id") int id, @RequestParam(value = "amount") int aantal) {
+
 
         Product p = repo.findById(id).get();
-        Winkelmand.getInstance().addProducten(p);
+        for (int i = 0; i < aantal; i++)
+            Winkelmand.getInstance().addProducten(p);
 
         /*@RequestMapping(value = {"/winkelmand"}, method = RequestMethod.POST)
                 public String ToCart(ModelMap map, @RequestParam(value = "amount")int amount){
             Product p = repo.findBy
             }*/
 
-        map.addAttribute("producten",Winkelmand.getInstance().getProducten());
+        map.addAttribute("producten", Winkelmand.getInstance().getProducten());
         return "winkelmand";
-        }
+    }
 
 
 }

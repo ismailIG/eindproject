@@ -35,24 +35,24 @@
 
 <nav th:replace="~{index::navigation}"></nav>
 
-        <img class="smallimg" th:src="${product.foto}"></img>
-        <span th:text="${product.naam}"></span>&nbsp;
-        <span th:text="${product.beschrijving}"></span>&nbsp;
-        <span th:text="${product.prijs}"></span><br>
-        <span th:text="${product.aantal}"></span>
+<img class="smallimg" th:src="${product.foto}"></img>
+<span th:text="${product.naam}"></span><!--&nbsp;-->
+<span th:text="${product.beschrijving}"></span><!--&nbsp;-->
+<span th:text="${product.prijs}"></span><br>
+<span th:text="${product.aantal}"></span>
 
 
 <form th:action="@{~/winkelmand}" method="post">
-            <input type="hidden" name="id" th:value="${product.id}">
-         <label for="amount">Aantal:</label>
-         <select name="amount" id="amount">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-            <br><br>
-            <input type="submit" value="Voeg toe aan winkelmandje" >
+    <input type="hidden" name="id" th:value="${product.id}">
+    <label for="amount">Aantal:</label>
+    <select name="amount" id="amount">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Voeg toe aan winkelmandje">
 </form>
 
 </body>
