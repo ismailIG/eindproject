@@ -13,6 +13,8 @@ public class AboutController {
     @Autowired
     private ProductRepository productRepository;
 
-    @RequestMapping(value = {"/about","/About"}, method = RequestMethod.GET)
-    public String showAbout (ModelMap map) { return "about";}
+    @RequestMapping(value = {"/about", "/About"}, method = RequestMethod.GET)
+    public String showAbout(ModelMap map) {
+        return "about";
+    }
 }

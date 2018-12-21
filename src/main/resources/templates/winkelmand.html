@@ -12,7 +12,8 @@
           crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{~/css/main.css}">
     <!-- CSS Icon -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
     <!--CSS Datatable -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
@@ -53,9 +54,6 @@
         </tr>
         </thead>
         <tbody>
-
-
-        <!--@thymesVar id="producten" type=""-->
         <tr th:each="product:${producten}" th:class="(${productStat.odd})?'odd':'even'">
             <td th:text="${product.naam}"></td>
             <td th:text="${product.beschrijving}"></td>
@@ -66,10 +64,6 @@
         </tr>
         </tbody>
     </table>
-
-    <!--<div>
-        <a class="btn btn-primary" th:href="@{~/bestel}">bestel</a>
-    </div>-->
 </div>
 
 <!-- Betalingsformulier-->

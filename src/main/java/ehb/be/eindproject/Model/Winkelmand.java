@@ -21,10 +21,11 @@ public class Winkelmand {
     ArrayList<Product> producten;
     float total;
 
-    public void addProducten(Product p){
+    public void addProducten(Product p) {
         producten.add(p);
     }
-    public void removeProducten(Product p){
+
+    public void removeProducten(Product p) {
         producten.remove(p);
     }
 
@@ -33,30 +34,13 @@ public class Winkelmand {
     }
 
 
-    public float getTotalOfWinkelmand(){
-       float total = 0;
+    public float getTotalOfWinkelmand() {
+        float total = 0;
 
-        for (Product p: producten) {
+        for (Product p : producten) {
             total += p.getPrijs();
         }
 
-       return total;
+        return total;
     }
-
-
-
-
-
-    //private static Winkelmand ourInstance = new Winkelmand();
-
-    //public static Winkelmand getInstance() {
-        //return ourInstance;
-    //}
-
-    //private Winkelmand() {
-    //}
-
-    //public HashSet<Product> getCart() {
-        //return cart;
-    //}
 }

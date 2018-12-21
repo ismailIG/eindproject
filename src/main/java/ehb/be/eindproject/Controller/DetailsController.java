@@ -20,7 +20,7 @@ public class DetailsController {
     public String showDetails(@PathVariable(name = "id") int identifier, ModelMap map) {
 
         Product detailProduct = productRepository.findById(identifier).get();
-        map.addAttribute("product",detailProduct);
+        map.addAttribute("product", detailProduct);
 
         return "details";
     }

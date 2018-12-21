@@ -12,6 +12,8 @@ public class ContactController {
     @Autowired
     private ProductRepository productRepository;
 
-    @RequestMapping(value = {"/contact","/Contact"}, method = RequestMethod.GET)
-    public String showAbout (ModelMap map) { return "contact";}
+    @RequestMapping(value = {"/contact", "/Contact"}, method = RequestMethod.GET)
+    public String showAbout(ModelMap map) {
+        return "contact";
+    }
 }

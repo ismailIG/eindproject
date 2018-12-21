@@ -13,6 +13,8 @@ public class BestelController {
     @Autowired
     private ProductRepository productRepository;
 
-    @RequestMapping(value = {"/bestel","/Bestel"}, method = RequestMethod.POST)
-    public String showBestel (ModelMap map) { return "bestel";}
+    @RequestMapping(value = {"/bestel", "/Bestel"}, method = RequestMethod.POST)
+    public String showBestel(ModelMap map) {
+        return "bestel";
+    }
 }

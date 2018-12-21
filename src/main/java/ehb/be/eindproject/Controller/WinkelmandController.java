@@ -35,10 +35,6 @@ public class WinkelmandController {
         for (int i = 0; i < aantal; i++)
             Winkelmand.getInstance().addProducten(p);
 
-        /*@RequestMapping(value = {"/winkelmand"}, method = RequestMethod.POST)
-                public String ToCart(ModelMap map, @RequestParam(value = "amount")int amount){
-            Product p = repo.findBy
-            }*/
 
         map.addAttribute("producten", Winkelmand.getInstance().getProducten());
         return "winkelmand";

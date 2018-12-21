@@ -10,12 +10,12 @@ import java.awt.*;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  int id;
-    private  String naam;
-    private  float prijs;
+    private int id;
+    private String naam;
+    private float prijs;
     private String categorie;
     private String dier;
-    private  String beschrijving;
+    private String beschrijving;
     private String foto;
     private int aantal;
 
@@ -27,12 +27,12 @@ public class Product {
         this.foto = foto;
     }
 
-    // hier komt een constructeur
+    // Constructeur
 
     public Product() {
     }
 
-    // getters en setters
+    // Getters & Setters
 
     public String getBeschrijving() {
         return beschrijving;
